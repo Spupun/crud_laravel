@@ -11,7 +11,7 @@
 <body>
 
     <div class="container mt-5">
-        <form method="put" action="{{ url('userdetails/'.$userdetails->id.'/edit') }}">
+        <form method="POST" action="{{ url('userdetails/edit/'.$userdetails->id.'') }}">
             @csrf
             <!-- @method('PUT') -->
             <div class="mb-3">
@@ -27,7 +27,7 @@
             </div>
             <div class="mb-3">
                 <label for="mobile" class="form-label">Mobile</label>
-                <input type="tel" class="form-control" name="mobile"value="{{$userdetails->mobile}}" placeholder="Enter your mobile number">
+                <input type="tel" class="form-control" name="mobile" value="{{$userdetails->mobile}}" placeholder="Enter your mobile number">
                 @error('mobile') <span class="text-danger">{{$message}}</span> @enderror
 
             </div>

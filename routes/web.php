@@ -21,9 +21,12 @@ use App\Http\Controllers\UserDetailController;
 Route::get('/userdetails/index', [UserDetailController::class, 'index']);
 Route::get('/userdetails/create', [UserDetailController::class, 'create']);
 Route::post('/userdetails/create', [UserDetailController::class, 'store']);
-Route::get('/userdetails/{id}/edit', [UserDetailController::class, 'edit']);
-Route::delete('/userdetails/delete', [UserDetailController::class, 'delete']);
-Route::put('/userdetails/{id}/edit', [UserDetailController::class, 'update']);
+Route::get('/userdetails/destroy/{id}/', [UserDetailController::class, 'destroy']);
+
+Route::get('/userdetails/edituser/{id}', [UserDetailController::class, 'edituser']);
+Route::post('/userdetails/edit/{id}', [UserDetailController::class, 'edit']);
 
 
+// Route::get('/userdetails/edituser/{id}/', [UserDetailController::class, 'edituser']);
+// Route::get('/userdetails/edit/{id}/', [UserDetailController::class, 'edit']);
 

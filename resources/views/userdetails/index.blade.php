@@ -17,7 +17,6 @@
                     <th scope="col">Email</th>
                     <th scope="col">Mobile</th>
                     <th scope="col">Action</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -28,9 +27,9 @@
                     <td>{{$data->email}}</td>
                     <td>{{$data->mobile}}</td>
                     <td>
-                    <a href="{{ url('userdetails/' . $id . '/edit') }}" class="btn btn-success">Edit</a>
-                    <a href="{{ url('userdetails/' . $id . '/delete') }}" class="btn btn-danger">Delete</a>
-
+                    <!-- <a href="{{ url('userdetails/edit') }}" class="btn btn-success">Edit</a> -->
+                    <a href="{{ url('userdetails/edituser/' . $data->id) }}" class="btn btn-success">Edit</a>
+                    <a href="{{ url('userdetails/destroy/' . $data->id) }}" class="btn btn-danger">Delete</a>
                     </td>
 
                 </tr>
